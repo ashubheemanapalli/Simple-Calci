@@ -1,0 +1,139 @@
+:root {
+  font-size: 40px;
+}
+body{
+  background-color: #001a1a;
+  font-family: 'Open-sans',sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  max-height: 100%;
+  overflow-y: hidden;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: 90vh;
+  background-image: url(yellow.png);
+  margin: 5vh auto;
+}
+.container .calculator{
+  width: 22vw;
+  height: 80vh;
+  background-color: #b3ffff;
+  margin: 0 auto;
+  top: 2vw;
+  position: relative;
+  border-radius: 0.3vw;
+  box-shadow: 2px 4px 8px 1px #97000b;
+  display: flex;
+  flex-direction: column;
+}
+.container .calculator .result{
+  height: 12vw;
+}
+.container .calculator .result .history{
+  text-align: right;
+  height: 1.5vh;
+  margin: 0 2vw;
+  padding-top: 1vh;
+  font-size: 0.5rem;
+  color: #919191;
+
+}
+.container .calculator .output{
+  text-align: right;
+  height: 7vh;
+  margin: 1vw 2vw;
+  padding-top: 2vh;
+  font-size: 0.6rem;
+
+}
+.container .calculator .keybord{
+  height: 40vw;
+}
+
+.container .calculator .keybord .operator, .container .calculator .keybord .number, .container .calculator .keybord .empty{
+  width: 3vw;
+  height: 5vh;
+  margin: 1vw;
+  float: left;
+  border-radius: 40%;
+  border-width: 0;
+  font-size: 0.4rem;
+  font-weight: bold;
+}
+.container .calculator .keybord .number, .container .calculator .keybord .empty{
+  background-color: #b3ffff;
+}
+.container .calculator .keybord .number,.container .calculator .keybord .operator{
+  cursor: pointer;
+}
+.container .calculator .keybord .operator:active, .container .calculator .keybord .number:active{
+  font-size: 0.3rem;
+}
+.container .calculator .keybord .operator:focus, .container .calculator .keybord .number:focus, .container .calculator .keybord .empty:focus{
+  outline: 0;
+}
+.container .calculator .keybord button:nth-child(4){
+  font-size: 0.5rem;
+  background-color: #00cc66;
+}
+.container .calculator .keybord button:nth-child(8){
+  font-size: 0.5rem;
+  background-color: #ff6600;
+}
+.container .calculator .keybord button:nth-child(12){
+  font-size: 0.5rem;
+  background-color: #ff3385;
+}
+.container .calculator .keybord button:nth-child(16){
+  font-size: 0.5rem;
+  background-color: #1a66ff;
+}
+.container .calculator .keybord button:nth-child(20){
+  font-size: 0.5rem;
+  background-color: #ffcc00;
+}
+@media only screen and (max-width:723px) {
+  .container .calculator{
+    width: 50vw;
+  }
+  .container .calculator .result{
+    height: 20vh;
+  }
+  .container .calculator .keybord{
+    height: 60vh;
+  }
+  .container .calculator .keybord .operator, .container .calculator .keybord .number, .container .calculator .keybord .empty{
+    width: 7vw;
+    height: 8vh;
+    margin: 2vw;
+    float: left;
+    border-radius: 40%;
+    border-width: 0;
+    font-size: 0.3rem;
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width:193px) {
+  .container .calculator{
+    width: 70vw;
+  }
+  .container .calculator .result{
+    height: 30vh;
+  }
+  .container .calculator .keybord{
+    height: 70vh;
+  }
+  .container .calculator .keybord .operator, .container .calculator .keybord .number, .container .calculator .keybord .empty{
+    width: 15vw;
+    height: 8vh;
+    margin: 1vw;
+    float: left;
+    border-radius: 40%;
+    border-width: 0;
+    font-size: 0.3rem;
+    font-weight: bold;
+  }
+}
